@@ -19,7 +19,6 @@ body{
         width:80%;
         max-width: 400px;
         margin:auto;
-        height:200px;
         background:rgb(181, 243, 243);
         margin:50px auto;
         -webkit-animation:bgChange 2s 2s alternate infinite;
