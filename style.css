@@ -4,15 +4,23 @@
 }
 body{
     font-family: 'Baloo Paaji 2', cursive;
-    background:url("img/2.jpg") ;
+    display: grid;
+    background:#f7a46d;
     background-size: cover;
+    width: 100vw;
+    place-items: center;
     height: 100vh;
+    -webkit-animation:body 2s 2s alternate infinite;
+    transition: all 2s ease;
+    
 
 }
 .container{
-        width:400px;
+        width:500px;
+        max-width: 400px;
+        margin:auto;
         height:200px;
-        background:gray;
+        background:rgb(181, 243, 243);
         margin:50px auto;
         -webkit-animation:bgChange 2s 2s alternate infinite;
         transition: all 2s ease;
@@ -22,17 +30,33 @@ body{
 }
 @-webkit-keyframes bgChange {
     0% {
-       background: #1e2224; 
+       background: #f58f4b; 
     }
     
     50% {
-      background: #0374f5;
+      background: #f58403;
     }
     
     100% {
-        background: #f76df0;
+        background: #00f7ff;
     }
 }
+
+@keyframes body{
+    0% {
+        background: #fa8149; 
+     }
+     
+     70% {
+       background: #f3ca43;
+     }
+     
+     100% {
+         background: #04dee6;
+     }
+    
+}
+
 
 /* Default Style */
 .graph {
