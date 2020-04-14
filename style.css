@@ -5,67 +5,48 @@
 body{
     font-family: 'Baloo Paaji 2', cursive;
     display: grid;
-    background:#f7a46d;
+    background: black;
     background-size: cover;
     width: 100vw;
     place-items: center;
     height: 100vh;
-    -webkit-animation:body 2s 2s alternate infinite;
-    transition: all 2s ease;
-    
-
 }
 .container{
         width:80%;
         max-width: 400px;
         margin:auto;
-        background:rgb(181, 243, 243);
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	    background-size: 400% 400%;
+	    animation: gradient 3s ease infinite;
         margin:50px auto;
-        -webkit-animation:bgChange 2s 2s alternate infinite;
-        transition: all 2s ease;
         text-align: center;
+        border-radius: 15px;
         
 
 }
-@-webkit-keyframes bgChange {
-    0% {
-       background: #f58f4b; 
-    }
-    
-    50% {
-      background: #f58403;
-    }
-    
-    100% {
-        background: #00f7ff;
-    }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-@keyframes body{
-    0% {
-        background: #fa8149; 
-     }
-     
-     70% {
-       background: #f3ca43;
-     }
-     
-     100% {
-         background: #04dee6;
-     }
-    
-}
 
 
 /* Default Style */
 .graph {
     font-size: 20px;
     text-align: center;
-    color: blue;
+    color: white;
     
   }
   .graph a {
-    color: black;
+    color: #e73c7e;
     text-decoration: none;
     cursor: pointer;
   }
