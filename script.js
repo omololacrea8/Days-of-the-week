@@ -45,3 +45,29 @@ else if(day == 6){
 //execution of result
 document.getElementById("days-of-the-week").innerHTML = daysOfTheWeek;
 document.getElementById("corr-quote").innerHTML = quotes;
+
+//adding timer will give it more sense 
+(()=>{
+    setInterval(()=>{
+    
+        const convert=new Date().toLocaleTimeString();
+       const elem=document.querySelector('h3');
+      return  elem.innerHTML=convert; 
+    },1000)
+
+    //quote of the day 
+    const motive= async ()=>{
+        const api= await fetch('http://quotes.stormconsultancy.co.uk/random.json');
+        const res=await  api.json()
+        return res ;
+    }
+    motive().then( res =>{
+        var show=document.querySelector('h4')
+        show.innerHTML=`favourite Quote of the day:
+            ${res.quote}
+        `
+
+
+
+    } )
+})()
